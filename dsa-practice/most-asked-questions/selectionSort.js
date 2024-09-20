@@ -21,8 +21,6 @@ function swap(num, i, j) {
   num[j] = temp;
 }
 
-// Time Complexity
-O(N ** 2);
+// Time Complexity - O(N ** 2);
 
-// Space Complexity
-O(1);
+// Space Complexity - O(1);

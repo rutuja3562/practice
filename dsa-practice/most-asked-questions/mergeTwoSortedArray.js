@@ -29,8 +29,6 @@ function mergeTwoSortedArray(arr1, arr2) {
 }
 console.log("Merge sort...", mergeTwoSortedArray(arr1, arr2));
 
-// Time complexity
-O(m + n);
+// Time complexity -  O(m + n);
 
-//  Space Complexity
-O(1);
+//  Space Complexity -  O(1);

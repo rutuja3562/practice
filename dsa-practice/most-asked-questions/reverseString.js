@@ -10,23 +10,21 @@ function reverseString(str) {
 }
 console.log("reverse string..", reverseString(str));
 
-// time Complexity
-O(n);
-// Space Complexity
-O(n);
+// time Complexity -  O(n);
+// Space Complexity - O(n);
 
 var str = "swap";
 function optimizedReverseString(s) {
-  let str = s.split("");
-  var n = str.length;
+  let strArray = s.split("");
+  var n = strArray.length;
   var i = 0;
   var j = n;
   while (i < j) {
-    swap(str, i, j);
+    swap(strArray, i, j);
     i++;
     j--;
   }
-  return str.join("");
+  return strArray.join("");
 }
 
 function swap(s, i, j) {
@@ -35,3 +33,5 @@ function swap(s, i, j) {
   s[j] = temp;
 }
 console.log("Optimized String ", optimizedReverseString(str));
+
+// time complexity O(n)
