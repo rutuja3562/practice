@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy and Paste Text</title>
+  </head>
+  <body>
+    <!-- Text area to copy from -->
+    <textarea id="textToCopy">This is the text you want to copy!</textarea>
+
+    <!-- Copy button -->
+    <button onclick="copyText()">Copy Text</button>
+
+    <!-- Message displaying copy status -->
+    <p id="message"></p>
+
+    <!-- File1 and File2 to paste the text into -->
+    <textarea
+      id="file1"
+      placeholder="Pasted text will appear here (File 1)"
+    ></textarea>
+    <!-- <textarea
+      id="file2"
+      placeholder="Pasted text will appear here (File 2)"
+    ></textarea> -->
+  </body>
+</html>
+<script src="./clipboard-api.js"></script>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="textToCopy">This is the text you want to copy!</textarea>
+    <button onclick="copyText()">Copy Text</button>
+    <p id="message"></p>
+  </body>
+</html>
+<script src="./clipboard-api.js"></script> -->
