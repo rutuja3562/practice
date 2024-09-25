@@ -1,4 +1,4 @@
-function findMinimunOfArray(array) {
+function findMinimumOfArray(array) {
   var n = array.length;
   var min = Infinity;
   for (var i = 0; i < n; i++) {
@@ -9,7 +9,7 @@ function findMinimunOfArray(array) {
   return min;
 }
 var array = [1, 5, -4, -10, -1000, 34, 76];
-console.log("Minimum number...", findMinimunOfArray(array));
+console.log("Minimum number...", findMinimumOfArray(array));
 
 function findMaxNumOfArray(arr) {
   var n = arr.length;
