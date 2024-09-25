@@ -13,6 +13,7 @@ function checkIsParentheses(string) {
         stack.pop();
       }
     }
+    // return false;
   }
   if (stack.length === 0) {
     return true;
