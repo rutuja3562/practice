@@ -1,4 +1,4 @@
-// Kadane's Algorithm or maximum sum ofContiguousSubArray
+// Kadane's Algorithm or maximum sum of ContiguousSubArray
 function kadaneAlgorithm(arr) {
   var currSum = arr[0];
   var globalMax = arr[0];
