@@ -6,6 +6,8 @@
 // and after code execution it initialized actual value.
 // 4. You can redeclare a variable
 
+// https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/
+
 function example() {
   console.log(x); // undefined (due to hoisting)
   var x = 10;
