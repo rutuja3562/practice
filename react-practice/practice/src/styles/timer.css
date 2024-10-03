@@ -1,91 +1,140 @@
 /* General layout for the timer container */
 .timer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f8fa;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Title styling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); */
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+/* Title styling */
+.timer-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #115de9;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Display area for the timer */
+.timer-display {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.timer-display:hover {
+  transform: scale(1.05);
+}
+
+/* Timer input styling */
+.input {
+  font-size: 2rem;
+  padding: 10px;
+  width: 100px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Remove the input number arrows */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Input focus style */
+.input:focus {
+  border-color: #0056b3;
+}
+
+/* Timer count display */
+.timer-count {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* General button styling */
+.timer-button {
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timer-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Start button styling */
+.timer-button.start {
+  background-color: #28a745;
+}
+
+.timer-button.start:hover {
+  background-color: #218838;
+}
+
+/* Stop button styling */
+.timer-button.stop {
+  background-color: #dc3545;
+}
+
+.timer-button.stop:hover {
+  background-color: #c82333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
   .timer-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
   }
-  
-  /* Display area for the timer */
+
   .timer-display {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 30px;
   }
-  
-  /* Timer count display */
+
   .timer-count {
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 20px;
   }
-  
-  /* Button group layout */
-  .button-group {
-    display: flex;
-    gap: 10px;
-  }
-  
-  /* General button styling */
+
   .timer-button {
-    padding: 10px 25px;
     font-size: 1.2rem;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 10px 20px;
   }
-  
-  /* Start button styling */
-  .timer-button.start {
-    background-color: #28a745;
+
+  .input {
+    font-size: 1.5rem;
+    padding: 8px;
+    width: 80px;
   }
-  
-  .timer-button.start:hover {
-    background-color: #218838;
-  }
-  
-  /* Stop button styling */
-  .timer-button.stop {
-    background-color: #dc3545;
-  }
-  
-  .timer-button.stop:hover {
-    background-color: #c82333;
-  }
-  
-  /* Responsive design for smaller screens */
-  @media (max-width: 600px) {
-    .timer-title {
-      font-size: 2rem;
-    }
-  
-    .timer-display {
-      padding: 30px;
-    }
-  
-    .timer-count {
-      font-size: 2rem;
-    }
-  
-    .timer-button {
-      font-size: 1rem;
-      padding: 8px 20px;
-    }
-  }
-  
+}

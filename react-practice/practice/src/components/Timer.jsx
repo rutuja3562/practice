@@ -31,7 +31,13 @@ export const Timer = () => {
     <div className="timer-container">
       <h1 className="timer-title">Timer</h1>
       <div className="timer-display">
-        <p className="timer-count">{time} seconds</p>
+        <input
+          type="number"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+          className="input"
+        />
+        {/* <p className="timer-count">{time} seconds</p> */}
         <div className="button-group">
           <button className="timer-button start" onClick={handleStartTimer}>
             Start
