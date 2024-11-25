@@ -145,6 +145,7 @@ function tenToNineteen(number) {
         ][number - 10];
     } else return undefined;
 }
+
 function oneToNine(number){
     return [
          "",
