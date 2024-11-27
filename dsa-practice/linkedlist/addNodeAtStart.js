@@ -51,6 +51,39 @@ class linkedList {
     this.size++;
     return `Node with value ${val} added at the start`;
   }
+
+  deleteNode(data) {
+    // if (this.head === null) {
+    //   return "Linked list must contains at least one node";
+    // }
+    // if (this.head.data === data) {
+    //   this.head = this.head.data;
+    //   return;
+    // }
+    // let curr = this.head;
+    // while (curr.next !== null && curr.next.data !== data) {
+    //   curr = curr.next;
+    // }
+    // if (curr.next !== null) {
+    //   curr.next = curr.next.next;
+    // }
+    if (this.head === null) return;
+
+    if (this.head.data === data) {
+      this.head = this.head.next;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next !== null && current.next.data !== data) {
+      current = current.next;
+    }
+
+    if (current.next !== null) {
+      current.next = current.next.next;
+    }
+  }
+
   printList() {
     let current = this.head;
     let output = "";
@@ -63,11 +96,23 @@ class linkedList {
   }
 }
 const list = new linkedList();
-console.log(list.addNodeAtStart(10));
-// list.addNodeAtStart(20);
-// list.addNodeAtStart(30);
-// list.addNodeAtStart(40);
-list.addNodeAtEnd(20);
-list.addNodeAtEnd(30);
-list.addNodeAtEnd(40);
+
+// Add node at start of linked List
+
+list.addNodeAtStart(10);
+list.addNodeAtStart(20);
+list.addNodeAtStart(30);
+list.addNodeAtStart(40);
+list.printList();
+
+// add node at last of linked list
+
+list.addNodeAtEnd(50);
+list.addNodeAtEnd(60);
+list.addNodeAtEnd(70);
+list.printList();
+// Delete node from linked list
+
+list.deleteNode(20);
+
 list.printList();
